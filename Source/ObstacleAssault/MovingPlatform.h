@@ -21,12 +21,17 @@ protected:
 	virtual void BeginPlay() override;
 
 public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
 	UPROPERTY(EditAnywhere, Category="Config")
 	FVector PlatformVelocity = FVector(100, 0, 0);
 
+	UPROPERTY(VisibleAnywhere)
+	float DistanceTraveled;
+	
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
 private:
+	FVector StartLocation;
+
 	void Move(float DeltaTime);
 };
