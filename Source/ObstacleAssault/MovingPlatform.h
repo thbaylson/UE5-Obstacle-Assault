@@ -24,8 +24,8 @@ public:
 	UPROPERTY(EditAnywhere, Category="Config")
 	FVector PlatformVelocity = FVector(100, 0, 0);
 
-	UPROPERTY(VisibleAnywhere)
-	float DistanceTraveled;
+	UPROPERTY(EditAnywhere, Category = "Config")
+	float MoveDistance;
 	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
