@@ -25,6 +25,7 @@ void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	Move(DeltaTime);
+	Rotate(DeltaTime);
 }
 
 void AMovingPlatform::Move(float DeltaTime)
@@ -47,5 +48,10 @@ void AMovingPlatform::Move(float DeltaTime)
 		// Reverse direction
 		PlatformVelocity = -PlatformVelocity;
 	}
+}
+
+void AMovingPlatform::Rotate(float DeltaTime)
+{
+	// Do Stuff
 }
 
