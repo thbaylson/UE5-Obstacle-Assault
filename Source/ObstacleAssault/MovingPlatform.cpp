@@ -16,8 +16,8 @@ void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
 	StartLocation = GetActorLocation();
-
-	UE_LOG(LogTemp, Display, TEXT("Configured Move Distance: %f"), MoveDistance);
+	FString name = GetName();
+	UE_LOG(LogTemp, Display, TEXT("BeginPlay: %s"), *name);
 }
 
 // Called every frame
