@@ -50,12 +50,12 @@ void AMovingPlatform::Rotate(float DeltaTime)
 	// Do Stuff
 }
 
-bool AMovingPlatform::ShouldPlatformReturn()
+bool AMovingPlatform::ShouldPlatformReturn() const
 {
 	return GetDistanceMovedFunction() > MoveDistance;
 }
 
-float AMovingPlatform::GetDistanceMovedFunction()
+float AMovingPlatform::GetDistanceMovedFunction() const
 {
 	return FVector::Dist(StartLocation, GetActorLocation());
 }

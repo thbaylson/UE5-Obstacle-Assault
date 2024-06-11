@@ -36,6 +36,7 @@ private:
 	void Move(float DeltaTime);
 	void Rotate(float DeltaTime);
 
-	bool ShouldPlatformReturn();
-	float GetDistanceMovedFunction();
+	// Const functions are guaranteed by the compiler to NOT change the state of the class, ie. they cannot modify members
+	bool ShouldPlatformReturn() const;
+	float GetDistanceMovedFunction() const;
 };
